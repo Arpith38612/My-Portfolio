@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f1a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Particle Background */
+.particles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(0,255,255,0.2) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.glow {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00f5ff,
+               0 0 20px #00f5ff,
+               0 0 40px #00f5ff;
+}
+
+/* Typing Animation */
+.typing {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00f5ff;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards,
+             blink 1s infinite;
+}
+
+@keyframes typing {
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Card Design */
+.card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 0 40px rgba(0,255,255,0.7);
+}
+
+h2 {
+  color: #00f5ff;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Skills */
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(0,255,255,0.1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+ul li:hover {
+  background: rgba(0,255,255,0.3);
+  transform: scale(1.05);
+}
+
+/* Form */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  background: #00f5ff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+  opacity: 0.7;
+}
