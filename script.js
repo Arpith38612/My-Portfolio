@@ -48,6 +48,18 @@ if (form) {
     const message = document.getElementById("message").value.trim();
     const status = document.getElementById("statusMessage");
 
+    // ================= RATE LIMITING =================
+    if (localStorage.getItem("lastSubmit")) {
+      const last = parseInt(localStorage.getItem("lastSubmit"));
+      if (Date.now() - last < 30000) {
+        if (status) {
+          status.innerText = "Please wait 30 seconds before sending again.";
+          status.style.color = "orange";
+        }
+        return;
+      }
+    }
+
     try {
 
       // 🔹 Save to Firebase
@@ -70,6 +82,9 @@ if (form) {
           }
         );
       }
+
+      // Save timestamp AFTER successful submission
+      localStorage.setItem("lastSubmit", Date.now());
 
       if (status) {
         status.innerText = "Message Sent Successfully ✔";
