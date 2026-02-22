@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Arpith | Cybersecurity Portfolio</title>
   <meta charset="UTF-8">
+  <title>Arpith Thomas | Cybersecurity Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Search Console Verification -->
+  <!-- Google Verification -->
   <meta name="google-site-verification" content="3TEK_bQ4ktY3Tah1LfF44Zhzk9kLjMD5bxmhZ58ibL0" />
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-text">Booting Secure System...</div>
+</div>
+
+<div class="grid-bg"></div>
 <div class="particles"></div>
 
+<!-- NAVBAR -->
+<nav>
+  <h2 class="logo">ARPITH THOMAS</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><button id="themeToggle">☀</button></li>
+  </ul>
+</nav>
+
 <header>
-  <h1 class="glow">Arpith Thomas</h1>
-  <p class="typing">BCA Student | Aspiring Cybersecurity Professional</p>
+  <h1 class="glitch" data-text="Arpith Thomas">Arpith Thomas</h1>
+  <p class="subtitle">Cybersecurity | Web Security | Firebase Backend</p>
 </header>
 
-<section class="card">
+<section class="card" id="about">
   <h2>About Me</h2>
-  <p>
-    I am passionate about cybersecurity, web technologies and ethical hacking.
-    I enjoy building secure systems and understanding how modern digital
-    infrastructure works at a deeper level.
-  </p>
+  <p>I build secure web applications and explore cybersecurity systems.</p>
 </section>
 
-<section class="card">
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Git & GitHub</li>
-    <li>Firebase</li>
-    <li>Networking Fundamentals</li>
-    <li>Cybersecurity Basics</li>
-  </ul>
+<section class="card" id="skills">
+  <h2>Technical Skills</h2>
+
+  <div class="skill">
+    <span>Web Security</span>
+    <div class="progress"><div style="width:85%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Firebase</span>
+    <div class="progress"><div style="width:80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Networking</span>
+    <div class="progress"><div style="width:75%"></div></div>
+  </div>
 </section>
 
-<section class="card">
-  <h2>Projects</h2>
-  <p>
-    <strong>Personal Portfolio Website</strong><br>
-    Responsive portfolio connected with Firebase backend.
-  </p>
-</section>
-
-<section class="card">
+<section class="card" id="contact">
   <h2>Contact Me</h2>
 
   <form id="contactForm">
@@ -58,6 +74,7 @@
     <button type="submit">Send Message</button>
   </form>
 
+  <p id="statusMessage"></p>
 </section>
 
 <footer>
